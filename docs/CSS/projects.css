@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    font-family: 'roboto',sans-serif;
+    box-sizing: border-box;
+   
+}
+.container{
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 20px;
+    box-shadow: 4px 6px 5px rgba(0,0,0,0.7);
+}
+.projects{
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    width: auto;
+    padding: 20px;
+    margin: 20px;
+    padding: 15px;
+
+}
+
+.project-info{
+    background-color: rgb(148, 250, 237);
+        position: relative;
+        margin: auto; /* Center horizontally */
+        padding: 10px;
+        display: flex; /* Enable flexbox */
+        flex-direction: column; /* Stack child elements vertically if needed */
+        justify-content: center; /* Center content vertically */
+        align-items: center; /* Center content horizontally */
+        width: 35%;
+        height: auto; /* Adjust height based on content */
+        font-family: 'roboto',sans-serif;
+        font-size: 1.2em;
+        text-align: justify;
+        
+    
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    width: 60%; /* Full width of the proj-vid container */
+    height: auto;
+    
+}
+.video-container video{
+    max-width: 100%; /* Scale video within container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 780px) {
+
+    .container{
+        width: auto;
+        display: flex;
+        flex-direction:column ;
+    }
+    .projects{
+        gap: 20px;
+        align-items: center;
+        flex-direction: column;
+    }
+    .project-info{
+        width: auto;
+    }
+   
+}

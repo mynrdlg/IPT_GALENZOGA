@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width:auto; 
+    min-width: 300px; 
+    background-color: rgba(18, 124, 148, 0.239);
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    
+} 
+
+
+.proj-vid{
+    width: 65%;
+    min-width: 300px;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.about {
+    position: relative;
+    margin: auto; /* Center horizontally */
+    padding: 10px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack child elements vertically if needed */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 46%;
+    height: auto; /* Adjust height based on content */
+}
+.img-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: auto; /* Adjust based on content */
+    width: 100%; /* Make it flexible */
+}
+
+.img-container img {
+    border-radius: 50%; /* Circular image */
+    max-width:40%; /* Scale with parent */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.proj-vid h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.vid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full width of the proj-vid container */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.vid-container video {
+    max-width: 100%; /* Scale video within container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    object-fit: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center align stacked items */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .container .about,
+    .proj-vid {
+        width: 90%; /* Make items take up most of the screen width */
+    }
+
+    .about p {
+        font-size: 1em; /* Adjust text size for smaller screens */
+    }
+
+    .proj-vid h1 {
+        font-size: 1.5em; /* Reduce heading size */
+    }
+}
+@media screen and (max-width: 480px) {
+    .about p,
+    .proj-vid h1 {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .img-container img {
+        width: 80%; /* Make the image smaller */
+    }
+}

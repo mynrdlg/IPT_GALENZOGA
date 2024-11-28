@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maynard Portfolio</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    
+    background: linear-gradient(to bottom, 
+      #80EE98, 
+      #46DFB1, 
+      #09D1C7, 
+      #15919B, 
+      #127c94, 
+      #486c98);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content:  space-between;
+    align-items: center;
+    
+}
+
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+.navbar a{
+    text-decoration: none;
+    outline: none;
+    font-size: 1.7em;
+    color: black;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+     font-style: normal;
+     padding: 9px;
+     text-shadow: 0 -3px 5px rgba(0, 0, 0, 0.4); 
+     
+}
+
+.navbar h3 a:hover{
+    color:#ffffff; 
+    transition: .2s ease-in-out;
+}
+
+.navbar ul li:hover > a{
+    background-color:#4d0800;
+    color: white;
+   text-shadow: 2 3px 6px rgba(0, 0, 0, 0.3); 
+   border-radius: 15px;
+   transition: .4s ease-in-out;
+
+}
+
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width:auto; 
+    min-width: 300px; 
+    background-color: rgba(18, 124, 148, 0.239);
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 1);
+    
+} 
+
+
+.proj-vid{
+    width: 65%;
+    min-width: 300px;
+    margin: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+.about {
+    position: relative;
+    margin: auto; /* Center horizontally */
+    padding: 10px;
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack child elements vertically if needed */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    width: 46%;
+    height: auto; /* Adjust height based on content */
+}
+.img-container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: auto; /* Adjust based on content */
+    width: 100%; /* Make it flexible */
+}
+
+.img-container img {
+    border-radius: 50%; /* Circular image */
+    max-width:40%; /* Scale with parent */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.about p {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    margin: 10px;
+}
+
+.proj-vid h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.vid-container {
+    display: flex;
+    justify-content: center;
+    width: 100%; /* Full width of the proj-vid container */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'roboto',sans-serif;
+    font-size: 1.2em;
+    background-color: rgb(239, 239, 239);
+    padding-bottom:20px;
+    padding: 0;
+    margin: 0;
+}
+footer a{
+    text-decoration: none;
+    font-family: 'roboto',sans-serif;
+    color: black;
+}
+footer a:hover{
+    color: rgba(0, 0, 0, 0.8);
+}
+footer .info a{
+    font-size: 1.5em;
+    
+}
+
+@media screen and (max-width: 780px) {
+    .navbar {
+        height: auto; /* Allow the navbar height to adjust automatically */
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Add some padding for spacing */
+    }
+
+    .navbar h3 a {
+        display: block; /* Ensure the logo or title takes full width */
+        margin-bottom: 10px; /* Add some space below the logo or title */
+        font-size: 1.5em; /* Adjust the size for smaller screens */
+        text-align: center; /* Center the text */
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Stack list items vertically */
+        align-items: center; /* Center align the list items */
+        gap: 10px; /* Add spacing between menu items */
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    
+
+    .navbar ul li a {
+        display: block; /* Ensure each link takes the full width */
+        padding: 10px 20px; /* Add padding for better touch targets */
+        font-size: 1.2em; /* Adjust font size for smaller screens */
+    }
+
+
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1em;
+    }
+
+    footer .info {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack the items vertically */
+        align-items: center; /* Center align stacked items */
+        gap: 20px; /* Add spacing between items */
+    }
+
+    .container .about,
+    .proj-vid {
+        width: 90%; /* Make items take up most of the screen width */
+    }
+
+    .about p {
+        font-size: 1em; /* Adjust text size for smaller screens */
+    }
+
+    .proj-vid h1 {
+        font-size: 1.5em; /* Reduce heading size */
+    }
+}
+@media screen and (max-width: 480px) {
+    .about p,
+    .proj-vid h1 {
+        font-size: 0.9em; /* Further reduce font size */
+    }
+
+    .img-container img {
+        width: 80%; /* Make the image smaller */
+    }
+}
+
+</style>   
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+           
+            <h3><a href="index.html">Zero</a></h3>
+           
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+    </label>
+    <main>
+        
+        <div class="container">
+           
+            <div class="about">
+                <div class="img-container">
+                <img src="./media/may.png" alt="picture">
+                </div>
+                <p>Hi, My name is Maynard an aspiring Python Developer and striving to be a Cyber Security Specialist someday.</p>
+            </div>
+
+            <div class="proj-vid">
+
+                <h1>Sample Project</h1>
+                <div class="vid-container">
+                <video src="./media/project.vid1.mkv" controls></video>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="info">
+            <h3>Phone</h3>
+            (02) 1234-5678
+            09922412412
+        </div>
+        <div class="info">
+            <h3>Email</h3>
+            <a href="email.com">Zero@Gmail.com</a>
+        </div>
+        <div class="info">
+            <h3>Follow Me</h3>
+            <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="facebook.com"><i class="fa-brands fa-facebook"></i></a>
+
+        </div>
+        <div class="info">
+            <p>&copy; 2024 Zero Portfolio. 
+                </p>
+                <p>All rights reserved.</p>
+        </div>
+        
+    </footer>
+    <script>
+        
+    </script>
+</body>
+</html>
